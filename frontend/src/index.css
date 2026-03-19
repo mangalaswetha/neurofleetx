@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap');
+
+:root {
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+
+  /* Admin theme - deep slate + electric cyan */
+  --admin-bg: #060912;
+  --admin-surface: #0d1424;
+  --admin-card: #111c30;
+  --admin-border: rgba(56, 189, 248, 0.12);
+  --admin-accent: #38bdf8;
+  --admin-accent2: #818cf8;
+  --admin-text: #e2e8f0;
+  --admin-muted: #64748b;
+
+  /* Customer theme - deep violet + rose gold */
+  --cust-bg: #09060f;
+  --cust-surface: #110d1e;
+  --cust-card: #1a1130;
+  --cust-border: rgba(196, 130, 255, 0.12);
+  --cust-accent: #c482ff;
+  --cust-accent2: #f472b6;
+  --cust-text: #f1e8ff;
+  --cust-muted: #7c6b9e;
+
+  /* Driver theme - deep forest + neon lime */
+  --driver-bg: #050f08;
+  --driver-surface: #0a1810;
+  --driver-card: #0f2218;
+  --driver-border: rgba(74, 222, 128, 0.12);
+  --driver-accent: #4ade80;
+  --driver-accent2: #facc15;
+  --driver-text: #e8fdf0;
+  --driver-muted: #4d7a5e;
+
+  /* Fleet theme - dark rust + amber */
+  --fleet-bg: #0f0900;
+  --fleet-surface: #1a1100;
+  --fleet-card: #241700;
+  --fleet-border: rgba(251, 146, 60, 0.12);
+  --fleet-accent: #fb923c;
+  --fleet-accent2: #fbbf24;
+  --fleet-text: #fff7ed;
+  --fleet-muted: #7c5c2e;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--font-body); }
+h1, h2, h3, h4 { font-family: var(--font-display); }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 2px; }
+
+/* Animations */
+@keyframes fadeIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+@keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.5; } }
+@keyframes spin { to { transform:rotate(360deg); } }
+@keyframes slideIn { from { transform:translateX(-10px); opacity:0; } to { transform:translateX(0); opacity:1; } }
+@keyframes ping { 0%{ transform:scale(1); opacity:0.8; } 100%{ transform:scale(2); opacity:0; } }
+
+.fade-in { animation: fadeIn 0.4s ease both; }
+.slide-in { animation: slideIn 0.3s ease both; }
+
+/* Stagger children */
+.stagger > *:nth-child(1) { animation-delay: 0.05s; }
+.stagger > *:nth-child(2) { animation-delay: 0.1s; }
+.stagger > *:nth-child(3) { animation-delay: 0.15s; }
+.stagger > *:nth-child(4) { animation-delay: 0.2s; }
+.stagger > *:nth-child(5) { animation-delay: 0.25s; }
+.stagger > *:nth-child(6) { animation-delay: 0.3s; }

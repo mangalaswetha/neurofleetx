@@ -1,0 +1,58 @@
+/* src/App.css */
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --bg-dark: #0a0e1a;
+  --bg-card: #111827;
+  --bg-card2: #1a2234;
+  --accent-blue: #00d4ff;
+  --accent-green: #00ff88;
+  --accent-orange: #ff6b35;
+  --accent-purple: #7c3aed;
+  --text-primary: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --border: rgba(0, 212, 255, 0.15);
+  --glow-blue: 0 0 20px rgba(0, 212, 255, 0.3);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg-dark);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3 { font-family: 'Rajdhani', sans-serif; }
+
+.glass-card {
+  background: rgba(17, 24, 39, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #00d4ff, #0088ff);
+  color: #000;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  transition: all 0.2s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--glow-blue);
+}
+
+.status-available { color: var(--accent-green); }
+.status-in-use    { color: var(--accent-orange); }
+.status-maintenance { color: #ef4444; }
+.status-idle      { color: var(--text-secondary); }
